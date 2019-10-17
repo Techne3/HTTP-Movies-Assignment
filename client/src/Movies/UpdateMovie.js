@@ -31,7 +31,7 @@ function UpdateMovie({match, history}) {
   
     setUpdated({
         ...updated,
-        [e.target.name]: value
+        [e.target.name]:value
       });
     }
   
@@ -62,6 +62,7 @@ function UpdateMovie({match, history}) {
             value={updated.title}
             onChange={changeHandler}
             placeholder="Title"
+            className="inputs"
           />
           <input
             type="text"  
@@ -69,6 +70,7 @@ function UpdateMovie({match, history}) {
             value={updated.director}
             onChange={changeHandler}
             placeholder="Director"
+            className="inputs"
           />
           <input
             type="number"  
@@ -76,13 +78,15 @@ function UpdateMovie({match, history}) {
             value={updated.metascore}
             onChange={changeHandler}
             placeholder="Metastore"
+            className="inputs"
           />
           <input
             type="text"  
             name="stars"
-            value={updated.stars.toString()}
+            value={updated.stars}
             onChange={changeHandler}
             placeholder="Stars"
+            className="inputs"
           />
           <button>Update Movie</button>
         </form>
